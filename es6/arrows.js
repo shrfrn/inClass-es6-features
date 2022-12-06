@@ -1,22 +1,45 @@
-'use strict'
+// 'use strict'
 
-// Expression bodies
 var nums = [8, 3, 7, 10]
+
+
+// Arrow function syntax
+nums.map((v) => {
+    console.log('v is: ', v)
+    return (v % 5 === 0) ? true : false
+})
+
+
+// Expression bodies: the body of the function is a single expression
+// In other words, if an arrow function has just one line...
+nums.map((v) => {
+    return (v % 5 === 0) ? true : false
+})
+
+
+// ...we can drop the return & {}
+nums.map((v) => (v % 5 === 0) ? true : false)
+
+
+// ...and if it has exactly one parameter, we can drop the ()
+nums.map(v => (v % 5 === 0) ? true : false)
+
+
+// Expression bodies: the body of the function is a single expression
 var odds = nums.filter(n => n % 2)
 var mults = nums.map(n => n * n)
 
-// Reducer needs to wrap returned object in prenthesis
+
+// When returning an object from an expression body
+// we need to wrap returned object in prenthesis
+
 var sum = nums.reduce((acc, n) => ({ total: acc.total + n }), { total: 0 })
+
 
 // console.log('Odds: ', odds)
 // console.log('Mults: ', mults)
 // console.log('sum is: ', sum)
 
-// Statement bodies
-// nums.forEach(v => {
-//   console.log('v is: ', v)
-//   if (v % 5 === 0) console.log('devided by 5: ', v)
-// })
 
 // ********************************************
 // Arrow function and 'this'
@@ -25,7 +48,7 @@ var sum = nums.reduce((acc, n) => ({ total: acc.total + n }), { total: 0 })
 // By default, the this of a global function is the window
 // in strict mode it is set to undefined
 
-// pooo()
+// func1()
 
 function func1() {
     console.log(this)
@@ -61,13 +84,13 @@ var bob = {
     _name: 'Bob',
     _friends: ['Puki', 'Muki'],
     printFriends(promo) {
-        console.log(promo)
-        console.log('this inside printFriends', this)
+        // console.log(promo)
+        // console.log('this inside printFriends', this)
         // var that = this
         // In arrow functions the "this" is lexically bound
         this._friends.forEach(f => {
             // console.log('INSIDE FOREACH THIS', this)
-            console.log(this._name + ' knows ' + f)
+            // console.log(this._name + ' knows ' + f)
         })
     },
 }

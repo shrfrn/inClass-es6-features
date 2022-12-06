@@ -35,23 +35,28 @@ var u1 = {
 
 // Using Object.assign()
 
-// var u2 = Object.assign({}, u1, { score: 75, address: { city: 'Tel Aviv', street: 'Nordeo' } })
+var u2 = Object.assign({}, u1, { score: 75, address: { city: 'Tel Aviv', street: 'Nordeo' } })
+// console.log('u1: ', u1)
+// console.log('u2: ', u2)
 // console.log('Using seperate address objects:', u1.address, u2.address)
 
 // The new way using spread
 
-// var u2 = { ...u1, score: 99, address: { city: 'Tel Aviv', street: 'Nordeo' } } 
-// u2.address.city = 'Metula' 
+var u2 = { ...u1, score: 99, address: { city: 'Tel Aviv', street: 'Nordeo' } } 
+u2.address.city = 'Metula' 
 // console.log('Using a separate address object:', u1.address, u2.address)
 
 // The new way using spread twice
 
-// var u2 = { ...u1, score: 99, address: { ...u1.address } }
-// u2.address.city = 'Afula' 
+var u2 = { ...u1, score: 99, address: { ...u1.address } }
+u2.address.city = 'Afula' 
 // console.log('Using seperate address objects:', u1.address, u2.address)
 
 var user4 = Object.assign({}, user1, { isBaba: true, score: 40 }, { isLala: false })
 // console.log('Object.assign can receive many objects:', user4)
+
+var user5 = { ...user1, ...{ isBaba: true, score: 40 }, ...{ isLala: false } } 
+// console.log('We can do tis with spread too:', user5)
 
 
 // Lets perform a DEEP copy for pet1:

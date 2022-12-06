@@ -1,7 +1,9 @@
 'use strict'
 
-// var num = 9
-// num = 11
+var a = 9
+a = 11
+
+// console.log('a: ', a)
 
 // 1 - Changing const is not allowed:
 const num = 9
@@ -35,10 +37,9 @@ pet.score = 100
 // func1()
 function func1() {
     const y = 10
-    if (false) {
-        // Change x to let and see whats happens
+    if (true) {
         {
-            var x = 10
+            var x = 10      // Change x to let and see whats happens
             // var y = 100
             const y = 100
         }
@@ -65,7 +66,7 @@ function func2() {
 // This var decleration will get hoisted (not the assignment)
 // var gg = 90
 
-func3()
+// func3()
 
 function func3() {
     {

@@ -8,7 +8,8 @@ var nums = [3, 7, 2]
 var max = Math.max(...nums)
 // console.log('EXPECTED: max=7, ACTUAL: max=', max)
 
-// console.log('EXPECTED: true ACTUAL:', func1(...nums) === 12)
+var res = func1(...nums)
+// console.log('EXPECTED: 12 ACTUAL:', res)
 
 function func1(x, y, z) {
   return x + y + z    
