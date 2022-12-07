@@ -52,7 +52,7 @@ function foo2({ p, q }) {
 // 2 - Destructuring with defualt values
 
 // j & k are being given default values
-// ...but j is being oveeriden by assignment
+// ...but j is being overriden by assignment
 
 const obj = { j: 8, popo: true }
 var { j = 10, k = 5 } = obj

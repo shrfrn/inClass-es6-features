@@ -5,7 +5,7 @@ var nums = [8, 3, 7, 10]
 
 // Arrow function syntax
 nums.map((v) => {
-    console.log('v is: ', v)
+    // console.log('v is: ', v)
     return (v % 5 === 0) ? true : false
 })
 
