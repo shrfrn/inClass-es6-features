@@ -58,7 +58,7 @@ const obj = { j: 8, popo: true }
 var { j = 10, k = 5 } = obj
 // console.log(`Result: j: ${j}    k: ${k}`)
 
-// 3 - Renaming properties + default values
+// 3 - Renaming properties
 
 const pet1 = {
     name: 'Charli',
@@ -66,20 +66,25 @@ const pet1 = {
 }
 
 const pet2 = {
-    name: 'puki',
+    // name: 'puki',
     age: 6,
 }
 
-var { name: petName = 'Arik', age: petAge } = pet1
-// console.log('petName, petAge: ', petName, petAge)
+var { name: petName, age: petAge } = pet1
+// console.log(`petName:${petName}     petAge: ${petAge}`)
 
-// 4 - More examples
+// 4 - Renaming properties + default values
+
+var { name: petName = 'Arik', age: petAge } = pet2
+// console.log(`nickname:${petName}     petAge: ${petAge}`)
+
+// 5 - More examples
 
 // printAge(pet1, pet2)
 
-function printAge({ age }, { name }) {
+function printAge({ name }, { age }) {
     // age = 8
-    console.log('age, name: ', age, name)
+    console.log(`age: ${age}, name: ${name}`)
 }
 
 // Assignment without declaration needs paranthesis:
