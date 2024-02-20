@@ -4,7 +4,7 @@
 // 1 - Basic syntax
 
 var a, b
-;[a, b] = [11, 22, 33, 4, 5]
+[a, b] = [11, 22, 33, 4, 5]
 // console.log(`a: ${a}    b: ${b}`)
 
 var [c, d] = [11, 22, 33, 4, 5]
@@ -89,5 +89,5 @@ function printAge({ name }, { age }) {
 
 // Assignment without declaration needs paranthesis:
 var s1, s2
-;({ s1, s2 } = { s1: 1, s2: 2 })
-// console.log('s1, s2: ', s1, s2)
+({ s1, s2 } = { s1: 1, s2: 2 })
+console.log('s1, s2: ', s1, s2)
