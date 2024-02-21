@@ -29,9 +29,14 @@ pet.score = 100
 // pet = null
 // console.log(pet)
 
-// 3 - Vars defined by "var" get hoisted (like functions),
-// let & const are never hoisted
+// 3 - Differences between var, let & const
+
+// Global vars defined by "var" get hoisted to the entire file
+// Local vars defined by "var" get hoisted to the entire function
 // The minimal scope of "var" is the whole function
+
+// let & const are never hoisted 
+// let & const are recognized only in the scope in which they were defined
 // let & const can't be redefined in the same scope
 
 // func1()
