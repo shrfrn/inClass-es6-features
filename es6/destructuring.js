@@ -1,34 +1,5 @@
 'use strict'
 
-// Array Destructuring
-// 1 - Basic syntax
-
-var a, b
-[a, b] = [11, 22, 33, 4, 5]
-// console.log(`a: ${a}    b: ${b}`)
-
-var [c, d] = [11, 22, 33, 4, 5]
-// console.log(`a: ${c}    b: ${d}`)
-
-// 2 - Swapping variables
-
-var x = 6
-var y = 2
-
-// Must use semicolon here if not defining the vars here:
-;[x, y] = [y, x]
-// console.log(`x: ${x}    y: ${y}`)
-
-// 3 - Ignoring some of the array's values
-
-var [i, , , j] = [11, 22, 33, 44, 55]
-// console.log(`i: ${i}    j: ${j}`)
-
-// 3 - Taking the ...rest into an array
-
-var [m, n, ...rest] = [1, 2, 3, 4, 5]
-// console.log('Result:', m, n, rest)
-
 // Object destructuring
 // 1 - Basic assignment
 
@@ -90,4 +61,33 @@ function printAge({ name }, { age }) {
 // Assignment without declaration needs paranthesis:
 var s1, s2
 ({ s1, s2 } = { s1: 1, s2: 2 })
-console.log('s1, s2: ', s1, s2)
+// console.log('s1, s2: ', s1, s2)
+
+// Array Destructuring
+// 1 - Basic syntax
+
+var a, b
+[a, b] = [11, 22, 33, 4, 5]
+// console.log(`a: ${a}    b: ${b}`)
+
+var [c, d] = [11, 22, 33, 4, 5]
+// console.log(`a: ${c}    b: ${d}`)
+
+// 2 - Swapping variables
+
+var x = 6
+var y = 2
+
+// Must use semicolon here if not defining the vars here:
+;[x, y] = [y, x]
+// console.log(`x: ${x}    y: ${y}`)
+
+// 3 - Ignoring some of the array's values
+
+var [i, , , j] = [11, 22, 33, 44, 55]
+// console.log(`i: ${i}    j: ${j}`)
+
+// 3 - Taking the ...rest into an array
+
+var [m, n, ...rest] = [1, 2, 3, 4, 5]
+// console.log('Result:', m, n, rest)
