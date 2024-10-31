@@ -19,9 +19,10 @@ function func1(x, y, z) {
 
 var copy = [...nums]
 copy.pop()
+copy[0]++
 
-// console.log('EXPECTED: nums.length=3, ACTUAL:', nums.length)
-// console.log('EXPECTED: copy.length=2, ACTUAL:', copy.length)
+// console.log(nums)
+// console.log(copy)
 
 // 3 - Try with or without spreading the sent array
 
@@ -37,22 +38,35 @@ function func2(...args) {    // ...rest
 const pet = { name: 'Bobbi', age: 3, nicknames: ['bob', 'doodoo'] }
 const petCopy = { ...pet }
 
-console.log('petCopy: ', petCopy)
+// console.log('petCopy: ', petCopy)
 
 // 02 - Changing a value in the original
 
 pet.age++
-console.log('pet: ', pet)
-console.log('petCopy: ', petCopy)
+// console.log('pet: ', pet)
+// console.log('petCopy: ', petCopy)
 
 // 03 - Changing a referenced value in original
 
 pet.nicknames.push('bobo')
-console.log('pet: ', pet)
-console.log('petCopy: ', petCopy)
+// console.log('pet: ', pet)
+// console.log('petCopy: ', petCopy)
 
 const petCopy2 = { ...pet, nicknames: [ ...pet.nicknames ]}
 
 pet.nicknames.push('yamyam')
-console.log('pet: ', pet)
-console.log('petCopy: ', petCopy2)
+// console.log('pet: ', pet)
+// console.log('petCopy: ', petCopy2)
+
+const students = [
+    { name: 'Roni', score: 90 },
+    { name: 'Moni', score: 83 },
+    { name: 'Joni', score: 70 },
+]
+
+var copy = [...students]
+copy.pop()
+copy[0].score++
+
+console.log(students)
+console.log(copy)
