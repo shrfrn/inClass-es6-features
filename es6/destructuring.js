@@ -3,9 +3,9 @@
 // Object destructuring
 // 1 - Basic assignment
 
-var info = { p: 42, d: 55, q: true }
-var { p, q } = info
-// console.log(`p: ${p}    q: ${q}`)
+var info = { age: 42, score: 55, isAdmin: true }
+var { age, isAdmin } = info
+// console.log(`age: ${age}, isAdmin: ${isAdmin}`)
 
 // 2 - Destructuring function parameters
 
@@ -13,11 +13,11 @@ var { p, q } = info
 // foo2(info)
 
 function foo1(obj) {
-    console.log(`foo1: p: ${obj.p}    q: ${obj.q}`)
+    console.log(`foo1: age: ${obj.age}, isAdmin: ${obj.isAdmin}`)
 }
 
-function foo2({ p, q }) {
-    console.log(`foo2: p: ${p}    q: ${q}`)
+function foo2({ age, isAdmin }) {
+    console.log(`foo2: age: ${age}, isAdmin: ${isAdmin}`)
 }
 
 // 2 - Destructuring with defualt values
@@ -25,9 +25,9 @@ function foo2({ p, q }) {
 // j & k are being given default values
 // ...but j is being overriden by assignment
 
-const obj = { j: 8, popo: true }
-var { j = 10, k = 5 } = obj
-// console.log(`Result: j: ${j}    k: ${k}`)
+const obj = { score: 8, isActive: true }
+var { score = 10, age = 5 } = obj
+// console.log(`score: ${score}, age: ${age}`)
 
 // 3 - Renaming properties
 
@@ -42,12 +42,12 @@ const pet2 = {
 }
 
 var { name: petName, age: petAge } = pet1
-// console.log(`petName:${petName}     petAge: ${petAge}`)
+console.log(`petName: ${petName}, petAge: ${petAge}`)
 
 // 4 - Renaming properties + default values
 
 var { name: petName = 'Arik', age: petAge } = pet2
-// console.log(`nickname:${petName}     petAge: ${petAge}`)
+// console.log(`petName: ${petName}, petAge: ${petAge}`)
 
 // 5 - More examples
 
