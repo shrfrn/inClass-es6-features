@@ -35,6 +35,19 @@ function func2(...args) {    // ...rest
 // Spreading objects
 // 01 - Shallow Copy
 
+var student = {
+    name: 'Arik',
+    age: 19,
+    city: 'Ashkelon',
+}
+
+var studentCopy = { ...student }
+var studentCopy = { ...student, balance: 100 }
+var studentCopy = { ...student, age: 20 }
+var studentCopy = { ...student, age: 21, city: 'Ashdod' }
+
+// console.log(studentCopy)
+
 const pet = { name: 'Bobbi', age: 3, nicknames: ['bob', 'doodoo'] }
 const petCopy = { ...pet }
 
