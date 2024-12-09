@@ -33,7 +33,7 @@ function func2(...args) {    // ...rest
 }
 
 // Spreading objects
-// 01 - Shallow Copy
+// 1 - Shallow Copy
 
 var student = {
     name: 'Arik',
@@ -53,13 +53,13 @@ const petCopy = { ...pet }
 
 // console.log('petCopy: ', petCopy)
 
-// 02 - Changing a value in the original
+// 2 - Changing a value in the original
 
 pet.age++
 // console.log('pet: ', pet)
 // console.log('petCopy: ', petCopy)
 
-// 03 - Changing a referenced value in original
+// 3 - Changing a referenced value in original
 
 pet.nicknames.push('bobo')
 // console.log('pet: ', pet)
@@ -77,9 +77,23 @@ const students = [
     { name: 'Joni', score: 70 },
 ]
 
-var copy = [...students]
-copy.pop()
-copy[0].score++
+// var copy = [...students]
+// copy.pop()
+// copy[0].score++
 
-console.log(students)
-console.log(copy)
+// console.log(students)
+// console.log(copy)
+
+// 4 - Deep Copy
+
+// Old way
+const deepCopy = JSON.parse(JSON.stringify(students))
+
+// New way
+// const deepCopy = structuredClone(students)
+
+// deepCopy.pop()
+// deepCopy[0].score++
+
+// console.log(students)
+// console.log(deepCopy)
