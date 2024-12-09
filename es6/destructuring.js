@@ -42,7 +42,7 @@ const pet2 = {
 }
 
 var { name: petName, age: petAge } = pet1
-console.log(`petName: ${petName}, petAge: ${petAge}`)
+// console.log(`petName: ${petName}, petAge: ${petAge}`)
 
 // 4 - Renaming properties + default values
 
@@ -55,7 +55,7 @@ var { name: petName = 'Arik', age: petAge } = pet2
 
 function printAge({ name }, { age }) {
     // age = 8
-    console.log(`age: ${age}, name: ${name}`)
+    // console.log(`age: ${age}, name: ${name}`)
 }
 
 // Assignment without declaration needs paranthesis:
