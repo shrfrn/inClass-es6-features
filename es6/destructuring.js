@@ -11,12 +11,19 @@ var { age, isAdmin } = info
 
 // foo1(info)
 // foo2(info)
+// foo3(info)
+
 
 function foo1(obj) {
     console.log(`foo1: age: ${obj.age}, isAdmin: ${obj.isAdmin}`)
 }
 
-function foo2({ age, isAdmin }) {
+function foo2(obj) {
+    var { age, isAdmin } = obj
+    console.log(`foo1: age: ${age}, isAdmin: ${isAdmin}`)
+}
+
+function foo3({ age, isAdmin }) {
     console.log(`foo2: age: ${age}, isAdmin: ${isAdmin}`)
 }
 
@@ -71,7 +78,7 @@ var a, b
 // console.log(`a: ${a}    b: ${b}`)
 
 var [c, d] = [11, 22, 33, 4, 5]
-// console.log(`a: ${c}    b: ${d}`)
+console.log(`c: ${c}    d: ${d}`)
 
 // 2 - Swapping variables
 
