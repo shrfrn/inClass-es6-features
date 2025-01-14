@@ -35,9 +35,9 @@ const pet = {
 // ]
 
 // var json = JSON.stringify(students)
-// localStorage.setItem('student', json)
+// localStorage.setItem('students', json)
 
-// jsonFromStorage = localStorage.getItem('student')
+// jsonFromStorage = localStorage.getItem('students')
 // const StudentsFromStorage = JSON.parse(jsonFromStorage)
 
 // Local Storage - Functional interface vs. dot notation
