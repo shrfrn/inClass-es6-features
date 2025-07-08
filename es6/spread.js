@@ -42,11 +42,11 @@ var student = {
 }
 
 var studentCopy = { ...student }
-var studentCopy = { ...student, balance: 100 }
-var studentCopy = { ...student, age: 20 }
-var studentCopy = { ...student, age: 21, city: 'Ashdod' }
+// var studentCopy = { ...student, balance: 100 }
+// var studentCopy = { ...student, age: 20 }
+// var studentCopy = { ...student, age: 21, city: 'Ashdod' }
 
-// console.log(studentCopy)
+console.log(studentCopy)
 
 const pet = { name: 'Bobbi', age: 3, nicknames: ['bob', 'doodoo'] }
 const petCopy = { ...pet }

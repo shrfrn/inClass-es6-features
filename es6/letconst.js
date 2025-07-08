@@ -33,7 +33,7 @@ pet.score = 100
 
 // Global vars defined by "var" get hoisted to the entire file
 // Local vars defined by "var" get hoisted to the entire function
-// The minimal scope of "var" is the whole function
+// So the minimal scope of "var" is the whole function
 
 // let & const are never hoisted 
 // let & const are recognized only in the scope in which they were defined
@@ -41,16 +41,23 @@ pet.score = 100
 
 // func1()
 function func1() {
-    const y = 10
+    const y = 20
+
+    console.log('Before Initialization x =', x)
+    // console.log('Before Initialization y =', y)
+    
     if (true) {
-        {
-            var x = 10      // Change x to let and see whats happens
-            // var y = 100
-            const y = 100
-        }
+        var x = 10      // Change x to let and see whats happens
+        console.log('After Initialization x =', x)
+
+        // var y = 200
+        // const y = 200
+
+        console.log('Inside if scope y =', y)
     }
-    console.log('X:', x)
-    console.log('Y:', y)
+
+    console.log('After if scope x =', x)
+    console.log('After if scope y =', y)
 }
 
 // func2()
@@ -64,7 +71,7 @@ function func2() {
         }
         console.log('name1:', name1)
     }
-    console.log('name1:', name1)
+    // console.log('name1:', name1)
     // console.log('typeof:', typeof name1)
 }
 

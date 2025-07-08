@@ -73,14 +73,19 @@ var s1, s2
 // Array Destructuring
 // 1 - Basic syntax
 
-var a, b
-[a, b] = [11, 22, 33, 4, 5]
+var [a, b] = [11, 22, 33, 4, 5]
 // console.log(`a: ${a}    b: ${b}`)
 
-var [c, d] = [11, 22, 33, 4, 5]
-console.log(`c: ${c}    d: ${d}`)
+// var a, b
+// [a, b] = [11, 22, 33, 4, 5]
+// console.log(`a: ${a}    b: ${b}`)
 
-// 2 - Swapping variables
+// 2 - Ignoring some of the array's values
+
+var [i, , , j] = [11, 22, 33, 44, 55]
+// console.log(`i: ${i}    j: ${j}`)
+
+// 3 - Swapping variables
 
 var x = 6
 var y = 2
@@ -89,12 +94,7 @@ var y = 2
 ;[x, y] = [y, x]
 // console.log(`x: ${x}    y: ${y}`)
 
-// 3 - Ignoring some of the array's values
-
-var [i, , , j] = [11, 22, 33, 44, 55]
-// console.log(`i: ${i}    j: ${j}`)
-
-// 3 - Taking the ...rest into an array
+// 4 - Taking the ...rest into an array
 
 var [m, n, ...rest] = [1, 2, 3, 4, 5]
 // console.log('Result:', m, n, rest)

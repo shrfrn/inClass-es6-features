@@ -1,4 +1,4 @@
-// 'use strict'
+'use strict'
 
 var nums = [8, 3, 7, 10]
 
@@ -85,11 +85,11 @@ var bob = {
     _friends: ['Puki', 'Muki'],
     printFriends(promo) {
         // console.log(promo)
-        // console.log('this inside printFriends', this)
+        console.log('this inside printFriends', this)
         // var that = this
         // In arrow functions the "this" is lexically bound
         this._friends.forEach(f => {
-            // console.log('INSIDE FOREACH THIS', this)
+            console.log('INSIDE FOREACH THIS', this)
             // console.log(this._name + ' knows ' + f)
         })
     },
